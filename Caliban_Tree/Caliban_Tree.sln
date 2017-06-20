@@ -1,12 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caliban_Tree", "Caliban_Tree.csproj", "{11E1430D-F8CB-A03F-AB8B-EE9F138D03C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11E1430D-F8CB-A03F-AB8B-EE9F138D03C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11E1430D-F8CB-A03F-AB8B-EE9F138D03C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11E1430D-F8CB-A03F-AB8B-EE9F138D03C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11E1430D-F8CB-A03F-AB8B-EE9F138D03C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
