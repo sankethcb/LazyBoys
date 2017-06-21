@@ -23,8 +23,6 @@ public class PlayerController : MonoBehaviour {
     public float playerJumpForce = 700f;
     //LayerMask for the ground
     public LayerMask groundMask;
-    //Double Jump Counter
-    bool doubleJump = false;
 
 
 	// Use this for initialization
@@ -36,13 +34,16 @@ public class PlayerController : MonoBehaviour {
         //Get move direction
         float move = Input.GetAxis("Horizontal");
 
+        //Set Animator Variables
         playerAnimator.SetFloat("Speed", Mathf.Abs(move));
 
+  
         //Move the player
-        if(isGrounded)
+        if (isGrounded)
             playerBody.velocity = new Vector2(move * playerSpeed, playerBody.velocity.y);
         else
-            playerBody.velocity = new Vector2(move * playerSpeed/2, playerBody.velocity.y);
+            playerBody.velocity = new Vector2(move * playerSpeed / 2, playerBody.velocity.y);
+       
 
         //Flip player if move is positive and player is facing the left
         if (move > 0 && isFacingLeft)
@@ -56,31 +57,25 @@ public class PlayerController : MonoBehaviour {
 
         //Did the ground transform hit the groundMask
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
-        
-        //Reset doubleJump
-        if(isGrounded)
-        {
-            doubleJump = false;
- 
-        }
+    
 	}
 
     void Update()
     {   
         //If the player is grounded
-        if ((isGrounded || !doubleJump) && Input.GetKeyDown(KeyCode.Space))
+        if ((isGrounded) && Input.GetKeyDown(KeyCode.Space))
         {
             //Add playerJumpForce to the y axis of the playerBody
-            if (isGrounded)
-                playerBody.AddForce(new Vector2(0, playerJumpForce));
-            else
-                playerBody.AddForce(new Vector2(0, playerJumpForce * .7f));
+            playerBody.AddForce(new Vector2(0, playerJumpForce));
 
-            //Set doubleJump to true if player double jumped
-            if(!doubleJump && !isGrounded)
-            {
-                doubleJump = true;
-            }
+        }
+
+        //ATTACK
+        //Get Attack Input
+        if(Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            BasicAttack();
+ 
         }
     }
 
@@ -95,4 +90,10 @@ public class PlayerController : MonoBehaviour {
         transform.localScale = scale; 
     }
 
+    //Function for the Basic Attack
+    void BasicAttack()
+    {
+        Debug.Log("Attacked");
+        playerAnimator.SetTrigger("Attack");
+    }
 }
