@@ -41,9 +41,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1536
     height: 821
   m_MinSize: {x: 950, y: 395}
+=======
+    width: 1920
+    height: 1037
+  m_MinSize: {x: 950, y: 542}
+>>>>>>> b859650da4d7946c2032c6965fcbcc5cc445f78b
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -104,12 +110,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1536
     height: 771
   m_MinSize: {x: 683, y: 345}
   m_MaxSize: {x: 12008, y: 8045}
   vertical: 0
   controlID: 3829
+=======
+    width: 1920
+    height: 987
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 9
+>>>>>>> b859650da4d7946c2032c6965fcbcc5cc445f78b
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +148,11 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 345}
   m_MaxSize: {x: 8006, y: 8045}
   vertical: 1
+<<<<<<< HEAD
   controlID: 3830
+=======
+  controlID: 10
+>>>>>>> b859650da4d7946c2032c6965fcbcc5cc445f78b
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +176,11 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
+<<<<<<< HEAD
   controlID: 3831
+=======
+  controlID: 11
+>>>>>>> b859650da4d7946c2032c6965fcbcc5cc445f78b
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -253,11 +276,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1259
     y: 0
+<<<<<<< HEAD
     width: 277
     height: 771
   m_MinSize: {x: 277, y: 74}
   m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 19}
+=======
+    width: 553
+    height: 987
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
+>>>>>>> b859650da4d7946c2032c6965fcbcc5cc445f78b
   m_Panes:
   - {fileID: 19}
   - {fileID: 20}
@@ -367,9 +398,15 @@ MonoBehaviour:
     height: 479
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 84fbffff
     m_LastClickedID: -1148
     m_ExpandedIDs: 60f9ffff86fbffff00000000
+=======
+    m_SelectedIDs: e0fbffff
+    m_LastClickedID: -1056
+    m_ExpandedIDs: 36e0ffff7ef1ffffe2fbffff00000000
+>>>>>>> b859650da4d7946c2032c6965fcbcc5cc445f78b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -419,14 +456,20 @@ MonoBehaviour:
     width: 687
     height: 479
   m_SceneLighting: 0
-  lastFramingTime: 121.74225620447673
+  lastFramingTime: 219.57462255285944
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -0.8503082, y: 0.04333131, z: 0}
     speed: 2
     m_Value: {x: -0.8503082, y: 0.04333131, z: 0}
+=======
+    m_Target: {x: 0, y: 0, z: 0}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0}
+>>>>>>> b859650da4d7946c2032c6965fcbcc5cc445f78b
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -453,9 +496,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 2.2613013
     speed: 2
     m_Value: 2.2613013
+=======
+    m_Target: 13.257443
+    speed: 2
+    m_Value: 13.257443
+>>>>>>> b859650da4d7946c2032c6965fcbcc5cc445f78b
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -552,19 +601,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
+<<<<<<< HEAD
     - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
   - Assets/Scripts
+=======
+    - Assets/Prefabs/Platforms/Platform Sets
+  m_ViewMode: 1
+  m_StartGridSize: 96
+  m_LastFolders:
+  - Assets/Prefabs/Platforms/Platform Sets
+>>>>>>> b859650da4d7946c2032c6965fcbcc5cc445f78b
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\VihanPC\Desktop\College\Games\BulletHELL\Caliban_Tree
   m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 39}
     m_SelectedIDs: ce250000
     m_LastClickedID: 9678
     m_ExpandedIDs: 0000000068250000ac250000ce2500005626000000ca9a3bffffff7f
+=======
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: e8250000
+    m_LastClickedID: 9704
+    m_ExpandedIDs: 00000000b6240000fa2400002c2500001e260000ffffff7f
+>>>>>>> b859650da4d7946c2032c6965fcbcc5cc445f78b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
