@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Managers\PlatformSpawner.cs" />
     <Compile Include="Assets\Scripts\Platforms\Platform.cs" />
     <Compile Include="Assets\Scripts\Platforms\TestPlatform.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
