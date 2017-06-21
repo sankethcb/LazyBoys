@@ -39,10 +39,13 @@ public class PlayerController : MonoBehaviour {
         playerAnimator.SetFloat("Speed", Mathf.Abs(move));
 
         //Move the player
-        playerBody.velocity = new Vector2(move * playerSpeed, playerBody.velocity.y);
+        if(isGrounded)
+            playerBody.velocity = new Vector2(move * playerSpeed, playerBody.velocity.y);
+        else
+            playerBody.velocity = new Vector2(move * playerSpeed/2, playerBody.velocity.y);
 
         //Flip player if move is positive and player is facing the left
-        if(move > 0 && isFacingLeft)
+        if (move > 0 && isFacingLeft)
         {
             flipPlayer();
         } 
@@ -58,6 +61,7 @@ public class PlayerController : MonoBehaviour {
         if(isGrounded)
         {
             doubleJump = false;
+ 
         }
 	}
 
@@ -65,9 +69,12 @@ public class PlayerController : MonoBehaviour {
     {   
         //If the player is grounded
         if ((isGrounded || !doubleJump) && Input.GetKeyDown(KeyCode.Space))
-        {   
+        {
             //Add playerJumpForce to the y axis of the playerBody
-            playerBody.AddForce(new Vector2(0, playerJumpForce));
+            if (isGrounded)
+                playerBody.AddForce(new Vector2(0, playerJumpForce));
+            else
+                playerBody.AddForce(new Vector2(0, playerJumpForce * .7f));
 
             //Set doubleJump to true if player double jumped
             if(!doubleJump && !isGrounded)
