@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour {
         if(isGrounded)
         {
             doubleJump = false;
+ 
         }
 	}
 
@@ -68,9 +69,12 @@ public class PlayerController : MonoBehaviour {
     {   
         //If the player is grounded
         if ((isGrounded || !doubleJump) && Input.GetKeyDown(KeyCode.Space))
-        {   
+        {
             //Add playerJumpForce to the y axis of the playerBody
-            playerBody.AddForce(new Vector2(0, playerJumpForce));
+            if (isGrounded)
+                playerBody.AddForce(new Vector2(0, playerJumpForce));
+            else
+                playerBody.AddForce(new Vector2(0, playerJumpForce * .7f));
 
             //Set doubleJump to true if player double jumped
             if(!doubleJump && !isGrounded)
