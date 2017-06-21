@@ -13,13 +13,13 @@ public abstract class Platform : MonoBehaviour
 
     //temp variable for movepseed
 
-    public int moveSpd;
+   
     Rigidbody2D rb2D;
 
 	void Start ()
     {
         rb2D = GetComponent<Rigidbody2D>();
-        rb2D.velocity = new Vector2(0, -moveSpd);
+       
     }
 	
 	
@@ -29,14 +29,5 @@ public abstract class Platform : MonoBehaviour
             Destroy(gameObject);
 	}
 
-    void OnBecameInVisible()
-    {
-        enabled = false;
-
-    }
-
-    void OnBecameVisible()
-    {
-        enabled = true;
-    }
+    
 }
