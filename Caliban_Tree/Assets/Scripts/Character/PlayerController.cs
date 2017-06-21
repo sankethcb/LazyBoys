@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour {
 
         //ATTACK
         //Get Attack Input
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if(Input.GetKeyUp(KeyCode.Mouse0))
         {
             BasicAttack();
  
