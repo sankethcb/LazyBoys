@@ -37,7 +37,6 @@ public class PlayerController : MonoBehaviour {
         //Set Animator Variables
         playerAnimator.SetFloat("Speed", Mathf.Abs(move));
 
-  
         //Move the player
         if (isGrounded)
             playerBody.velocity = new Vector2(move * playerSpeed, playerBody.velocity.y);
@@ -57,8 +56,11 @@ public class PlayerController : MonoBehaviour {
 
         //Did the ground transform hit the groundMask
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
-    
-	}
+        //Set Animator Variables
+        playerAnimator.SetBool("Ground", isGrounded);
+        playerAnimator.SetFloat("SpeedY", playerBody.velocity.y);
+
+    }
 
     void Update()
     {   
@@ -67,12 +69,13 @@ public class PlayerController : MonoBehaviour {
         {
             //Add playerJumpForce to the y axis of the playerBody
             playerBody.AddForce(new Vector2(0, playerJumpForce));
+            playerAnimator.SetBool("Ground", false);
 
         }
 
         //ATTACK
         //Get Attack Input
-        if(Input.GetKeyUp(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             BasicAttack();
  
@@ -93,7 +96,6 @@ public class PlayerController : MonoBehaviour {
     //Function for the Basic Attack
     void BasicAttack()
     {
-        Debug.Log("Attacked");
         playerAnimator.SetTrigger("Attack");
     }
 }
