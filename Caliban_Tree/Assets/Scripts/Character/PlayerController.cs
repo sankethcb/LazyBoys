@@ -10,17 +10,16 @@ public class PlayerController : MonoBehaviour {
     public bool isFacingLeft = false;
     //Reference to the Player's Rigidbody
     private Rigidbody2D playerBody;
-    //Reference to the Player's Animator
-    [SerializeField]
-    private Animator playerAnimator;
+    
     
     //Player Grounded?
     bool isGrounded = false;
     //Transform at Player's feet
     public Transform groundCheck;
+    //Radius of ground check
     float groundRadius = 0.1f;
     //Jump Force of the Player
-    public float playerJumpForce = 700f;
+    public float playerJumpForce;
     //LayerMask for the ground
     public LayerMask groundMask;
 
@@ -34,14 +33,8 @@ public class PlayerController : MonoBehaviour {
         //Get move direction
         float move = Input.GetAxis("Horizontal");
 
-        //Set Animator Variables
-        playerAnimator.SetFloat("Speed", Mathf.Abs(move));
-
         //Move the player
-        if (isGrounded)
-            playerBody.velocity = new Vector2(move * playerSpeed, playerBody.velocity.y);
-        else
-            playerBody.velocity = new Vector2(move * playerSpeed / 2, playerBody.velocity.y);
+        playerBody.velocity = new Vector2(move * playerSpeed, playerBody.velocity.y);
        
 
         //Flip player if move is positive and player is facing the left
@@ -56,10 +49,7 @@ public class PlayerController : MonoBehaviour {
 
         //Did the ground transform hit the groundMask
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
-        //Set Animator Variables
-        playerAnimator.SetBool("Ground", isGrounded);
-        playerAnimator.SetFloat("SpeedY", playerBody.velocity.y);
-
+     
     }
 
     void Update()
@@ -69,19 +59,9 @@ public class PlayerController : MonoBehaviour {
         {
             //Add playerJumpForce to the y axis of the playerBody
             playerBody.AddForce(new Vector2(0, playerJumpForce));
-            playerAnimator.SetBool("Ground", false);
-
         }
 
-        //ATTACK
-        //Get Attack Input
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            BasicAttack();
- 
-        }
     }
-
 
     //Function to flip the sprite
     void flipPlayer()
@@ -93,9 +73,4 @@ public class PlayerController : MonoBehaviour {
         transform.localScale = scale; 
     }
 
-    //Function for the Basic Attack
-    void BasicAttack()
-    {
-        playerAnimator.SetTrigger("Attack");
-    }
 }
