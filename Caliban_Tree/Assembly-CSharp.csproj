@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Bullet.cs" />
      <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Managers\PlatformSpawner.cs" />
      <Compile Include="Assets\Scripts\Platforms\Sets\DefaultSet.cs" />

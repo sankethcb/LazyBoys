@@ -23,6 +23,10 @@ public class PlayerController : MonoBehaviour {
     //LayerMask for the ground
     public LayerMask groundMask;
 
+    //Reference to the bullet
+    public GameObject bulletPrefab;
+    //Where should the bullet be instantiated
+    public Transform nozzle;
 
 	// Use this for initialization
 	void Start () {
@@ -54,11 +58,17 @@ public class PlayerController : MonoBehaviour {
 
     void Update()
     {   
-        //If the player is grounded
+        //If the player is grounded and Space was pressed
         if ((isGrounded) && Input.GetKeyDown(KeyCode.Space))
         {
             //Add playerJumpForce to the y axis of the playerBody
             playerBody.AddForce(new Vector2(0, playerJumpForce));
+        }
+
+        //If the player presses LMB
+        if(Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Instantiate(bulletPrefab, new Vector3(nozzle.position.x, nozzle.position.y), Quaternion.identity);
         }
 
     }
