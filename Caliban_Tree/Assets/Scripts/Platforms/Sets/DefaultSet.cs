@@ -9,7 +9,7 @@ public class DefaultSet : PlatformSet
 	
 	public override void SetPlatform()
     {       
-        for(int i=0;i<3;i++)
+        for(int i=0;i<2;i++)
         {
 
             platforms.Add(Instantiate(childPlatform));
@@ -18,9 +18,9 @@ public class DefaultSet : PlatformSet
             
         }
 
-        platforms[0].transform.localPosition= new Vector3(-6.5f, 0.0f);
-        platforms[1].transform.localPosition = new Vector3(0.0f, 0.0f);
-        platforms[2].transform.localPosition = new Vector3(6.5f, 0.0f);
+       // platforms[0].transform.localPosition= new Vector3(-10f, 0.0f);
+        platforms[0].transform.localPosition = new Vector3(0.0f, 2.5f);
+        platforms[1].transform.localPosition = new Vector3(10f, 0.0f);
 
     }
 		

@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Managers\PlatformSpawner.cs" />
+    <Compile Include="Assets\Scripts\Platforms\Sets\AltSet.cs" />
     <Compile Include="Assets\Scripts\Platforms\Sets\DefaultSet.cs" />
     <Compile Include="Assets\Scripts\Platforms\Sets\PlatformSet.cs" />
     <Compile Include="Assets\Scripts\Platforms\Types\GrassPlatform.cs" />

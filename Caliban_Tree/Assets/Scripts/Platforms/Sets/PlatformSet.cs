@@ -20,7 +20,10 @@ public abstract class PlatformSet : MonoBehaviour {
 	
 	void Update ()
     {
-		
+		if(transform.position.y < -10f)
+        {
+            Destroy(gameObject);
+        }
 	}
 
     void SetSpeed(float speed)

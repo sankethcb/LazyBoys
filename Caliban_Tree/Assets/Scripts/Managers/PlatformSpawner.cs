@@ -6,12 +6,16 @@ public class PlatformSpawner : MonoBehaviour
 {
 
     public GameObject defaultset;
+    public GameObject altset;
     public float spawnTime;
+    bool switchSpawn;
 
 
     void Start()
     {
+        switchSpawn = false;
         InvokeRepeating("SpawnPlatform", 1, spawnTime);
+       
     }
 
 
@@ -22,8 +26,17 @@ public class PlatformSpawner : MonoBehaviour
 
     void SpawnPlatform()
     {
+        if (!switchSpawn)
+        {
+            Instantiate(defaultset, new Vector3(0, 7f, 0), Quaternion.identity);
+            switchSpawn = true;
 
-        Instantiate(defaultset, new Vector3(0, 7f, 0), Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(altset, new Vector3(0, 7f, 0), Quaternion.identity);
+            switchSpawn = false;
+        }
 
     }
 
