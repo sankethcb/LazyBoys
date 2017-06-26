@@ -10,9 +10,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public abstract class Platform : MonoBehaviour
 {
-
-    //temp variable for movepseed
-
    
     Rigidbody2D rb2D;
 
