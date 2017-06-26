@@ -48,10 +48,11 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Managers\PlatformSpawner.cs" />
-     <Compile Include="Assets\Scripts\Platforms\GrassPlatform.cs" />
-     <Compile Include="Assets\Scripts\Platforms\Platform.cs" />
-     <Compile Include="Assets\Scripts\Platforms\PlatformSet.cs" />
-     <Compile Include="Assets\Scripts\Platforms\TestPlatform.cs" />
+     <Compile Include="Assets\Scripts\Platforms\Sets\DefaultSet.cs" />
+     <Compile Include="Assets\Scripts\Platforms\Sets\PlatformSet.cs" />
+     <Compile Include="Assets\Scripts\Platforms\Types\GrassPlatform.cs" />
+     <Compile Include="Assets\Scripts\Platforms\Types\Platform.cs" />
+     <Compile Include="Assets\Scripts\Platforms\Types\PoisonPlatform.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
